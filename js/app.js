@@ -32,8 +32,9 @@ function Birthday(count) {
     let date = (new Date(1900, 0, 0));
     date.setDate(date.getDate() + (countDays));
     let dateOfBirth = new Date(date);
-    birthday.innerHTML = dateOfBirth.getDate()+ '.' + (dateOfBirth.getMonth()+1)+ '.'+ dateOfBirth.getFullYear();
-    
+    let finishBD = dateOfBirth.getDate() + '.' + (dateOfBirth.getMonth() + 1) + '.' + dateOfBirth.getFullYear();
+    birthday.innerHTML = finishBD;
+    return dateOfBirth;
 }
 
 function Gender(datagender) {
