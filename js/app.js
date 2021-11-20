@@ -15,7 +15,11 @@ function Check_INN(indata) {
         for (let i = 0; i < (indata.length - 1); ++i) {
             sum += indata[i] * hash[i];
         }
-        let k = sum - (11 * (Math.floor(sum / 11)));
+    let k = sum - (11 * (Math.floor(sum / 11)));
+        if (k >= 10) {
+        k = 0;
+    }
+    
 
     if (k != indata[9]) {
             inputData.value = " ";
